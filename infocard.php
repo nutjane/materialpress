@@ -1,5 +1,5 @@
 <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
-            <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent"><i class="material-icons mdl-color-text--white"><?php echo get_theme_mod( 'themeslug_fab_icon' ); ?></i></button>
+            <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent"><i class="material-icons mdl-color-text--white"><?php echo get_theme_mod( 'themeslug_fab_icon','favorite' ); ?></i></button>
             <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>" rel='home'>            
             <img src='<?php echo get_blog_logo(); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'  border="0">
