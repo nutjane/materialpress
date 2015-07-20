@@ -12,7 +12,7 @@
   See the License for the specific language governing permissions and
   limitations under the License
 -->
-<html lang="en">
+<html <?php language_attributes(); ?>>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,4 +55,4 @@
     </style>
 <?php  wp_head(); ?>
   </head>
-<body style="background-image: url('<?php  echo get_blog_bg_url(); ?>');">
+<body style="background-image: url('<?php  echo get_blog_bg_url(); ?>');" >

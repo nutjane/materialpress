@@ -6,7 +6,7 @@
 	 <?php
     $args = array(
        'post__in' => get_option('sticky_posts'),
-       'caller_get_posts' => 1
+       'ignore_sticky_posts' => 1
     );
     $my_query = new WP_Query($args) ; ?>
     <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
@@ -38,11 +38,11 @@
           <!-- end author panel -->
           <?php
 		  	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			$args= array(
+			$args_other= array(
 				'ignore_sticky_posts' => 1,
 				'paged' => $paged
 			);
-			query_posts($args);
+			query_posts($args_other);
 		  ?>
            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
