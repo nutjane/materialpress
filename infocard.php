@@ -6,7 +6,7 @@
             </a>
               <?php bloginfo('name'); ?>
             </div>
-            <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
+            <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600"  style="width: 100%;">
               <div>
                 <strong><?php bloginfo('description'); ?></strong>
               </div>

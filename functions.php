@@ -31,12 +31,6 @@
 	/* do not show admin bar when logged in */
 	show_admin_bar(false);
 	
-	/* add a class to categogy */
-	add_filter('the_category','add_class_to_category',10,3);
-	function add_class_to_category( $thelist, $separator, $parents){
-		$class_to_add = 'category-text';
-		return str_replace('<a href="', '<a class="'. $class_to_add. '" href="', $thelist);
-	}
 	
 	/*custom  feature*/
 	function themeslug_theme_customizer( $wp_customize ) {
@@ -187,6 +181,10 @@
 	}
 	// Remove issues with prefetching adding extra views
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0); 
+
+
+	/* no <p> in category_description*/
+	remove_filter('term_description','wpautop');
 
 ?>
 

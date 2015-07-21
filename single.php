@@ -8,6 +8,8 @@
           </a>
         </div>
         <?php while ( have_posts() ) : the_post(); ?>
+        
+
         <div class="demo-blog__posts mdl-grid" id="post-<?php the_ID(); ?>">
           <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
           <?php
@@ -17,13 +19,20 @@
 		}
 		else  $post_thumbnail_url = esc_url(get_template_directory_uri())."/images/road.jpg"; 
 		?>
+        
+		<!-- facebook Open Graph Markup -->
+        <meta property="og:url" content="<?php echo esc_url( get_permalink() ); ?>" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="<?php echo the_title(); ?>" />
+        <meta property="og:image" content="<?php echo $post_thumbnail_url ?>" />
+        
             <div class="mdl-card__media mdl-color-text--grey-50"  style="background-image: url('<?php echo $post_thumbnail_url ?>');">
               <h3><?php the_title(); ?></h3>
             </div>
             <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
               <div class="minilogo" style="background-image: url('<?php echo get_blog_logo(); ?>');"></div>
-              <div>
-                <strong><?php the_category( ' | ' ); ?></strong>
+              <div style="align-items: flex-start;">
+                <span class="category-text"><strong><?php the_category( ' | ' ); ?></strong></span>
                 <span><?php the_time('F j, Y'); ?></span>
               </div>
               <div class="section-spacer"></div>

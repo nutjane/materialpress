@@ -7,8 +7,8 @@
 	
     <?php if ( have_posts() ) : ?>
            
-          <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
+          <div class="mdl-card mdl-cell mdl-cell--8-col">
+            <div class="mdl-card__media mdl-color-text--grey-50"  style="background-image: url('<?php echo category_description(); ?>');">
               <h3><?php
 					the_archive_title( '', '' ); ?></h3>
             </div>
@@ -16,7 +16,7 @@
               <div class="minilogo" style="background-image: url('<?php echo get_blog_logo(); ?>');"></div>
               <div>
                 <strong><?php echo $wp_the_query->found_posts  ?> Post in the list</strong>
-                <span>Let's check them out!</span>
+                <span>Let's check them out! </span>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@
             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
               <div class="minilogo" style="background-image: url('<?php echo get_blog_logo(); ?>');"></div>
               <div>
-                <strong><?php the_category( ' | ' ); ?></strong>
+                <span class="category-text"><strong><?php the_category( ' | ' ); ?></strong></span>
                 <span><?php the_time('F j, Y'); ?></span>
               </div>
             </div>

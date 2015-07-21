@@ -24,7 +24,7 @@
             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
               <div class="minilogo" style="background-image: url('<?php echo get_blog_logo(); ?>');"></div>
               <div>
-                <strong><?php the_category( ' | ' ); ?></strong>
+                <span class="category-text"><strong><?php the_category( ' | ' ); ?></strong></span>
                 <span><?php the_time('F j, Y'); ?></span>
               </div>
             </div>
@@ -64,7 +64,7 @@
             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
               <div class="minilogo" style="background-image: url('<?php echo get_blog_logo(); ?>');"></div>
               <div>
-                <strong><?php the_category( ' | ' ); ?></strong>
+                <span class="category-text"><strong><?php the_category( ' | ' ); ?></strong></span>
                 <span><?php the_time('F j, Y'); ?></span>
               </div>
             </div>

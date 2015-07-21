@@ -83,7 +83,7 @@ body .demo-blog {
   color: inherit;
 }
 .demo-blog .mdl-card__supporting-text {
-  width: 100%;
+  width: inherit;
   padding: 16px;
   min-height: 64px;
   display: flex;
@@ -245,7 +245,7 @@ body .demo-blog {
 .demo-blog--blogpost .meta + .mdl-card__supporting-text p {
   max-width: 512px;
   margin: 16px auto;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 28px;
 }
 
@@ -385,22 +385,22 @@ body .demo-blog {
 
 .demo-blog .mdl-mini-footer {
   margin-top: 80px;
-  height: 120px;
+  /*height: 120px;*/
   padding: 40px;
   align-items: center;
   background-color: white;
   box-sizing: border-box;
 }
 
-.category-text {
+.category-text a {
 color: rgb(24, 24, 24);
 text-decoration: none;
 }
 
 /*wp core*/
 .wp-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
+    background: #F7F7F7;
+    border: 1px solid #E8E8E8;
     max-width: 96%; /* Image does not overflow the content area */
     padding: 5px 3px 10px;
     text-align: center;
@@ -422,16 +422,16 @@ text-decoration: none;
     border: 0 none;
     height: auto;
     margin: 0;
-    max-width: 98.5%;
+    max-width: 500px;
     padding: 0;
     width: auto;
 }
 
 .wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: 17px;
-    margin: 0;
-    padding: 0 4px 5px;
+  font-size: 12px!important;
+  line-height: 17px!important;
+  margin: 15px 0 0 0!important;
+  padding: 0 4px 5px!important;
 }
 .alignnone {
     margin: 5px 20px 20px 0;
